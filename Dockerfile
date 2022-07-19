@@ -1,4 +1,4 @@
-FROM centos
+FROM centos:7
 
 RUN yum install -y epel-release java-1.8.0-openjdk wget
 RUN wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.8.23.tar.gz && \
