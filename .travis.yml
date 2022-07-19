@@ -1,0 +1,14 @@
+language: go
+go:
+- "1.13"
+arch:
+  - arm64
+os:
+  - linux
+services:
+  - docker
+before_install:
+  - docker login -u "$DOCKER_USERNAME" -p $DOCKER_PASSWORD
+install: skip
+script:
+  - docker build -t elasticsearch-arm64:6.8.23 .
