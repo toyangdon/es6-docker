@@ -11,4 +11,5 @@ before_install:
   - docker login -u "$DOCKER_USERNAME" -p $DOCKER_PASSWORD
 install: skip
 script:
-  - docker build -t elasticsearch-arm64:6.8.23 .
+  - docker build -t toyangdon/elasticsearch-arm64:6.8.23 .
+  - docker push toyangdon/elasticsearch-arm64:6.8.23 
